@@ -12,7 +12,8 @@ from sqlalchemy import create_engine
 
 
 # Use URL-encoded password (Esha@2004 → Esha%402004)
-engine = create_engine("mysql+pymysql://root:Esha%402004@localhost/ecommerce_inventory")
+engine = create_engine("mysql+pymysql://root:password@localhost/ecommerce_inventory")
+
 
 query = "SELECT * FROM `bigbasket products_new`"
 df = pd.read_sql(query, engine)
